@@ -1,0 +1,38 @@
+{
+
+    "page1-series": "page1-series",
+    "page1-activity": "page1-activity",
+    "page1-time": "page1-time",
+    "page1-add": "page1-add",
+    "page3-time": "活动时间",
+    "page3-add": "临平区算力模型调度平台的服务竞争优势",
+
+    "meetings": [
+        {
+            "time": "09:00",
+            "content": "临平区算力模型调度平台的服务竞争优势",
+            "speaker": "翻斗花园20撞89单元521 牛大爷"
+        },
+        {
+            "time": "09:30",
+            "content": "主题演讲一：行业趋势分析",
+            "speaker": "演讲人一姓名"
+        },
+        {
+            "time": "10:30",
+            "content": "小组讨论：创新解决方案",
+            "speaker": "多位小组成员姓名"
+        },
+        {
+            "time": "11:30",
+            "content": "午餐及休息",
+            "speaker": ""
+        },
+        {
+            "time": "13:00",
+            "content": "主题演讲二：技术前沿",
+            "speaker": "演讲人二姓名"
+        }
+    ]
+
+}
