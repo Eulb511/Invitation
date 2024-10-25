@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>邀请函 - 页面2</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .page1 {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* 背景图1 */
+        .bg-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: calc(100vh - 40%);
+            background: url('./img/back1.webp') no-repeat center center/cover;
+        }
+
+        /* 背景图2 */
+        .bg-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 65%;
+            background: url('./img/back2.webp') no-repeat center center/cover;
+        }
+
+        /* Logo 1 样式 */
+        .logo-left2 {
+            position: absolute;
+            top: 3%;
+            left: 79%;
+            width: 14%;
+            height: auto;
+        }
+
+        /* 活动列表字样 */
+        .activity {
+            position: absolute;
+            top: 14%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 6vw;
+            font-weight: 600;
+            color: #e6e6e6;
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* 长方体样式 */
+        .rectangle2 {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 84%;
+            height: 62%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        /* 日程内容田字格样式 */
+        .schedule-item {
+            display: grid;
+            grid-template-columns: 20% 78%;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            padding: 16px;
+            background-color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 11px;
+            border-radius: 8px;
+        }
+
+        .schedule-time {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            font-size: 1.2em;
+            font-weight: bold;
+            align-self: center;
+        }
+
+        .schedule-content {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            font-size: 1em;
+            color: rgb(39, 39, 39);
+            align-self: center;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .schedule-speaker {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            font-size: 1em;
+            color: rgb(102, 102, 102);
+            align-self: center;
+            text-align: right;
+        }
+
+        /* 下拉图标样式 */
+        .down2 {
+            position: absolute;
+            top: 94%;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page1">
+        <!-- 背景图部分 -->
+        <div class="bg-top"></div>
+        <div class="bg-bottom"></div>
+
+        <!-- Logo部分 -->
+        <img src="./img/logo1.webp" alt="Logo 1" class="logo-left2">
+
+        <!-- 活动流程部分 -->
+        <div class="activity"> // 活动流程 // </div>
+
+        <!-- 长方体，显示日程 -->
+        <div class="rectangle2" id="schedule-container">
+            <!-- 日程内容会通过JS动态生成 -->
+        </div>
+
+        <!-- 下拉图标 -->
+        <img src="./img/向上.svg" class="down2">
+    </div>
+
+    <!-- <script>
+        document.addEventListener('data-fetch', function() {
+            // 使用 fetch 方法获取外部的 JSON 文件
+            fetch('../bank/schedule.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('网络响应失败');
+                    }
+                    return response.json();  // 解析 JSON 文件
+                })
+                .then(scheduleData => {
+                    const container = document.getElementById('schedule-container');
+                    
+                    // 遍历 JSON 数据中的会议日程
+                    scheduleData.meetings.forEach(meeting => {
+                        const item = document.createElement('div');
+                        item.classList.add('schedule-item');
+
+                        const time = document.createElement('div');
+                        time.classList.add('schedule-time');
+                        time.textContent = meeting.time;
+
+                        const content = document.createElement('div');
+                        content.classList.add('schedule-content');
+                        content.textContent = meeting.content;
+
+                        const speaker = document.createElement('div');
+                        speaker.classList.add('schedule-speaker');
+                        speaker.textContent = `主讲人: ${meeting.speaker}`;
+
+                        item.appendChild(time);
+                        item.appendChild(content);
+                        item.appendChild(speaker);
+
+                        container.appendChild(item);
+                    });
+                })
+                .catch(error => {
+                    console.error('获取 JSON 数据时出错:', error);
+                });
+
+            console.log("page2已加载");
+
+
+        });
+    </script> -->
+</body>
+</html>
