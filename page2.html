@@ -22,32 +22,42 @@
             height: 100vh;
         }
 
+         /* 背景图整张 */
+        .bg-all {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: calc(100vh);
+            background: url("./img/backall.svg") no-repeat center center/cover;
+        }
+
         /* 背景图1 */
-        .bg-top {
+        /* .bg-top {
             position: absolute;
             top: 0;
             left: 0;
             width: 100vw;
             height: calc(100vh - 40%);
-            background: url('./img/back1.webp') no-repeat center center/cover;
-        }
+            background: url('./img/back1.svg') no-repeat center center/cover;
+        } */
 
         /* 背景图2 */
-        .bg-bottom {
+        /* .bg-bottom {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100vw;
             height: 65%;
-            background: url('./img/back2.webp') no-repeat center center/cover;
-        }
+            background: url('./img/back2.svg') no-repeat center center/cover;
+        } */
 
         /* Logo 1 样式 */
         .logo-left2 {
             position: absolute;
             top: 3%;
-            left: 79%;
-            width: 14%;
+            left: 50%;
+            width: 40%;
             height: auto;
         }
 
@@ -74,7 +84,7 @@
             transform: translate(-50%, -50%);
             width: 84%;
             height: 62%;
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.4);
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             overflow-y: auto;
@@ -88,7 +98,7 @@
             grid-template-rows: 1fr 1fr;
             gap: 10px;
             padding: 16px;
-            background-color: rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.6);
             margin-bottom: 11px;
             border-radius: 8px;
         }
@@ -136,11 +146,12 @@
 <body>
     <div class="page1">
         <!-- 背景图部分 -->
-        <div class="bg-top"></div>
-        <div class="bg-bottom"></div>
+        <div class="bg-all"></div>
+        <!-- <div class="bg-top"></div>
+        <div class="bg-bottom"></div> -->
 
         <!-- Logo部分 -->
-        <img src="./img/logo1.webp" alt="Logo 1" class="logo-left2">
+        <!-- <img src="./img/logo2.svg" alt="Logo 1" class="logo-left2"> -->
 
         <!-- 活动流程部分 -->
         <div class="activity"> // 活动流程 // </div>

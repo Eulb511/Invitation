@@ -22,42 +22,55 @@
             height: 100vh;
         }
 
+
+        /* 背景图整张 */
+        .bg-all {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: calc(100vh);
+            background: url("./img/backall.svg") no-repeat center center/cover;
+        }
+
         /* 背景图1 */
-        .bg-top {
+        /* .bg-top {
             position: absolute;
             top: 0;
             left: 0;
             width: 100vw;
             height: calc(100vh - 40%);
-            background: url('./img/back1.webp') no-repeat center center/cover;
-        }
+            background: url('./img/back1.svg') no-repeat center center/cover;
+        } */
 
         /* 背景图2 */
-        .bg-bottom {
+        /* .bg-bottom {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100vw;
             height: 65%;
-            background: url('./img/back2.webp') no-repeat center center/cover;
-        }
+            background: url('./img/back2.svg') no-repeat center center/cover;
+        } */
 
         /* Logo 1 样式 */
-        .logo-left3 {
+        /* .logo-left3 {
             position: absolute;
             top: 16%;
             left: 13.7%;
             width: 15%;
             height: auto;
-        }
+        } */
 
         /* Logo 2 样式 */
         .logo-right3 {
             position: absolute;
-            top: 14.5%;
-            right: 11%;
-            width: 60%;
+            top: 15.5%;
+            left: 50%;
+            right: auto;
+            width: 40%;
             height: auto;
+            transform: translate(-50%);
         }
 
         /* 长方体样式 */
@@ -104,17 +117,23 @@
         }
 
 
+        /* 点击导航 */
+        .nav-link {
+            color: #2d9fe0;
+        }
+
     </style>
 </head>
 <body>
     <div class="page2">
         <!-- 背景图部分 -->
-        <div class="bg-top"></div>
-        <div class="bg-bottom"></div>
+        <div class="bg-all"></div>
+        <!-- <div class="bg-top"></div>
+        <div class="bg-bottom"></div> -->
 
         <!-- Logo部分 -->
-        <img src="./img/logo1.webp" alt="Logo 1" class="logo-left3">
-        <img src="./img/logo2.webp" alt="Logo 2" class="logo-right3">
+        <!-- <img src="./img/logo1.webp" alt="Logo 1" class="logo-left3"> -->
+        <img src="./img/logo2.svg" alt="Logo 2" class="logo-right3">
 
         <!-- 长方体，显示二维码及文字 -->
         <div class="rectangle3">
@@ -132,7 +151,7 @@
                 活动地址：算力小镇A座①号501杭州数据要素运营中心
             </div>
             <div class="qr-text">
-                <a href="https://surl.amap.com/4u55OEPaj9ly" target="_blank">点击导航</a>
+                <a href="https://surl.amap.com/4u55OEPaj9ly" target="_blank" class="nav-link">点击导航</a>
             </div>
         </div>
 
