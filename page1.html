@@ -22,25 +22,35 @@
             height: 100vh;
         }
 
-        /* 背景图1 */
-        .bg-top {
+        /* 背景图整张 */
+        .bg-all {
             position: absolute;
             top: 0;
             left: 0;
             width: 100vw;
-            height: calc(100vh - 40%);
-            background: url('./img/back1.webp') no-repeat center center/cover;
+            height: calc(100vh);
+            background: url("./img/backall.svg") no-repeat center center/cover;
         }
 
+        /* 背景图1 */
+        /* .bg-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: calc(100vh);
+            background: url('./img/back1.svg') no-repeat center center/cover;
+        } */
+
         /* 背景图2 */
-        .bg-bottom {
+        /* .bg-bottom {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100vw;
             height: 65%;
-            background: url('./img/back2.webp') no-repeat center center/cover;
-        }
+            background: url('./img/back2.svg') no-repeat center center/cover;
+        } */
 
         /* Logo 1 样式 */
         .logo-left1 {
@@ -52,12 +62,36 @@
         }
 
         /* Logo 2 样式 */
-        .logo-right1 {
+        /* .logo-right1 {
             position: absolute;
             top: 10.5%;
             right: 14%;
             width: 56%;
             height: auto;
+        }   */
+
+        /* Logo 2 样式 */
+        .logo-right1 {
+            position: absolute;
+            top: 11.5%;
+            /* 先把right属性去掉，不然不好精准居中 */
+            right: auto;
+            left: 50%;
+            width: 40%; /* 缩小一点，这里把宽度从50%改为40%，你可以按需调整具体比例 */
+            height: auto;
+            transform: translateX(-50%); /* 通过translateX向左平移自身宽度的一半来实现水平居中 */
+        }
+
+        /* Logo 3 样式 */
+        .logo-sjxgd {
+            position: absolute;
+            top: 26%;
+            /* 先把right属性去掉，不然不好精准居中 */
+            right: auto;
+            left: 50%;
+            width: 80%; /* 缩小一点，这里把宽度从50%改为40%，你可以按需调整具体比例 */
+            height: auto;
+            transform: translateX(-50%); /* 通过translateX向左平移自身宽度的一半来实现水平居中 */
         }
 
         /* series-text字样 */
@@ -77,17 +111,18 @@
 
         /* activity-text字样 */
         .activity-text {
+            font-family: "黑体", sans-serif; /* 优先尝试使用黑体字体，如果系统中没有该字体，则使用sans-serif通用字体作为备选 */
             position: absolute;
-            top: 31%; /* 位于屏幕47%位置 */
+            top: 31%; 
             left: 50%;
             transform: translateX(-50%);
-            font-size: 7vw; /* 较大的中文字体 */
+            font-size: 5.5vw;
             font-weight: 540;
-            color: #FFFFFF; /* 纯白色 */
+            color: #FFFFFF;
             letter-spacing: 0em;
-            white-space: nowrap; /* 禁止换行 */
-            overflow: hidden; /* 超出部分隐藏 */
-            text-align: center; /* 水平居中 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
         }
 
         /* INVITE 字样 */
@@ -98,7 +133,7 @@
             transform: translateX(-50%);
             font-size: 24vw; /* 较大字号 */
             font-weight: 700;
-            color: rgba(95, 175, 248, 100); /* 比较浅的半透明白色 */
+            color: rgba(101, 197, 218, 100); /* 比较浅的半透明白色 */
             letter-spacing: 0.05em; /* 字符间距较大 */
             text-transform: uppercase; /* 全部大写 */
         }
@@ -135,6 +170,7 @@
 
         /* time字样 */
         .time1 {
+            font-family: "黑体", sans-serif; 
             position: absolute;
             top: 70%; /* 位于屏幕47%位置 */
             left: 50%;
@@ -151,6 +187,7 @@
 
         /* time-text字样 */
         .time-text1 {
+            font-family: "黑体", sans-serif; 
             position: absolute;
             top: 74%; /* 位于屏幕47%位置 */
             left: 50%;
@@ -166,6 +203,7 @@
 
         /* add字样 */
         .add1 {
+            font-family: "黑体", sans-serif; 
             position: absolute;
             top: 78%; /* 位于屏幕47%位置 */
             left: 50%;
@@ -181,6 +219,7 @@
 
         /* add-text字样 */
         .add-text1 {
+            font-family: "黑体", sans-serif; 
             position: absolute;
             top: 82%; /* 位于屏幕47%位置 */
             left: 50%;
@@ -209,19 +248,21 @@
 <body>
     <div class="page0">
         <!-- 背景图部分 -->
-        <div class="bg-top"></div>
-        <div class="bg-bottom"></div>
+        <div class="bg-all"></div>
+        <!-- <div class="bg-top"></div>
+        <div class="bg-bottom"></div> -->
 
         <!-- Logo部分 -->
-        <img src="./img/logo1.webp" alt="Logo 1" class="logo-left1">
-        <img src="./img/logo2.webp" alt="Logo 2" class="logo-right1">
+        <!-- <img src="./img/logo1.webp" alt="Logo 1" class="logo-left1"> -->
+        <img src="./img/logo2.svg" alt="Logo 2" class="logo-right1">
 
         <!-- 活动名称部分 -->
+        <img src="./img/logo3.svg" alt="Logo 3" class="logo-sjxgd">
         <div class="series-text"></div>
         <div class="activity-text"></div>
 
         <!-- 文本部分 -->
-        <div class="invite-text">INVITE</div>
+        <!-- <div class="invite-text">INVITE</div> -->
         <div class="invitation-text">邀请函</div>
         <div class="invitation2-text">INVITATION</div>
 
